@@ -23,31 +23,7 @@ public class Player {
 		this.name = name;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((playerID == null) ? 0 : playerID.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Player other = (Player) obj;
-		if (playerID == null) {
-			if (other.playerID != null)
-				return false;
-		} else if (!playerID.equals(other.playerID))
-			return false;
-		return true;
-	}
-
+	
 	@Override
 	public String toString() {
 		return playerID + " - " + name;
